@@ -1,0 +1,289 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    background-color: black;
+    font-family:"poppins",sans-serif;
+    color:white;
+}
+
+.navBar
+{
+    position:absolute;
+    top:0;
+    width:100%;
+    display: flex;
+    padding:3%;
+    justify-content:space-between;
+    z-index:1;
+}
+
+.navbar_logo
+{
+    width:120px;
+    height:50px;
+    left:30%;
+}
+
+.logo
+{
+    width:100%;
+    height:100%;
+}
+
+.navbar_items
+{
+
+    display:flex;
+    gap:10px;
+}
+
+.language_dropdown
+{
+    background-color: transparent;
+    color : white;
+    border: 1px solid white;
+    border-radius:4px;
+    padding:4px;
+}
+
+.signin_button
+{
+    color:white;
+    border:1px solid red;
+    background-color: red;
+    border-radius:4px;
+    padding:4.4px;
+}
+
+.bg_image_container
+{
+    width:100%;
+    height:100%;
+}
+
+.bg_image
+{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.bg_image_overlay
+{
+    position: absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+}
+
+
+/* <------------    homepage   ------------------------->   */
+
+.indexpage_content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.indexpage_title
+{
+    font-weight: 900;
+    font-size:2.9em;
+}
+
+.indexpage_subtitle,
+.indexpage_description
+{
+    font-weight: 400;
+    font-size :1.3em;
+}
+
+.email
+{
+    width:400px;
+    height:40px;
+    background:transparent;
+    color:white;
+    font-size: large;
+    border:2px solid white;
+    border-radius:4px;
+    padding:4px;
+}
+
+.getStarted
+{
+    width:150px;
+    height:40px;
+    background-color: red;
+    border:2px solid red;
+    border-radius:4px;
+    color:white;
+    font-size:large;
+    padding:4px;
+    cursor:pointer;
+}
+
+/*   <-----------------    style cards    ------------->    */
+
+
+.style-cards .card 
+{
+    display: flex;
+    align-items: center;
+    padding: 50px 50px; 
+    /* padding-right: 40px; */
+    border-top: 6px solid rgb(69, 65, 65);
+    width: 100%;
+    text-align: left; 
+    margin:0;
+}
+
+.style-cards .card img 
+{
+    height: 350px;
+    width: 450px;
+}
+
+.style-cards .card-1 
+{
+    padding: 100px 50px; 
+    
+}
+
+.style-cards .card-1 img 
+{
+    height: 250px;
+    width: 450px;
+}
+
+.style-cards h1
+{
+   font-weight: 900;
+   font-size: 2.9em;
+}
+
+.style-cards h3
+{
+   font-weight: 400;
+   font-size: 1.3em;
+}
+.style-cards .card.desc-left {
+    flex-direction: row-reverse; 
+    justify-content: space-between; 
+}
+
+.style-cards .card .desc {
+    text-align: left;
+    max-width: 50%; 
+    margin-left: 100px; 
+}
+
+.style-cards .card-1,
+.style-cards .card-3 {
+    flex-direction: row-reverse;
+}
+
+.style-cards .card-2,
+.style-cards .card-4 {
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+
+/*  ----------------->   faq's <---------------------------- */
+
+
+.card-5{
+    padding: 50px;
+    text-align: center;
+    border-top: 6px solid rgb(69, 65, 65);
+}
+
+.faqs li{
+    list-style:none;
+    width:100%;
+    padding:5px;
+}
+
+.faqs li label{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgb(65, 63, 63);
+    margin-bottom:2px;
+    cursor:pointer;
+    position:relative;
+}
+
+label::after{
+    content:'+';
+    position:absolute;
+    right:20px;
+    font-size:30px;
+    transition: tarnsform 0.5s;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+.faqs .content{
+    background: rgb(65,63,63);
+    text-align:left;
+    padding:0 20px;
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 0.5s, padding 0.5s;
+} 
+
+.faqs input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding:30px 20px;
+}
+
+.faqs input[type="radio"]:checked + label::after{
+    transform:rotate(135deg);
+}
+
+/* --------------->      Footer       <--------------------------------- */
+
+.footer
+{
+    padding: 50px;
+    border-top: 6px solid rgb(69, 65, 65);
+}
+
+.footer h2{
+    font-size:18px;
+    font-weight:400;
+    margin-bottom: 30px;
+}
+
+.footer .cols 
+{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:2rem;
+    
+} 
+
+.footer ul,a
+{
+    color: rgb(65, 63, 63);
+    list-style-type: none;
+} 
